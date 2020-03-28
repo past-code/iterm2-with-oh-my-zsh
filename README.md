@@ -74,7 +74,10 @@ powerline官网：http://powerline.readthedocs.io/en/latest/installation.html
 ```bash
 pip install powerline-status --user
 ```
-
+若你用的是pip3
+```bash
+pip install powerline-status --user
+```
 没有安装pip的同学可能会碰到zsh: command not found: pip。
 
 ![ImageInitIterm](https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/3.png)
@@ -87,10 +90,20 @@ sudo easy_install pip
 
 安装后再次执行安装powerline的命令即可。
 
+pip如果安装不成功可以安装pip3
+```bash
+curl https://bootstrap.pypa.io/get-pip.py | python3
+```
+安装完后，查看版本
+```bash
+pip3 --version
+```
+
 ![ImageInitIterm](https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/4.png)
 
 ### 安装PowerFonts
 
+该步骤就是给mac安装字体（具体百度），我自己安装的是FiraCode字体
 安装字体库需要首先将项目git clone至本地，然后执行源码中的install.sh。
 
 在你习惯的位置新建一个文件夹，如：~/Desktop/OpenSource/
@@ -136,6 +149,8 @@ open .
 再次进入iTerm2 -> Preferences -> Profiles -> Colors -> Color Presets中根据个人喜好选择这两种配色中的一种即可：
 
 ![ImageInitIterm](https://raw.githubusercontent.com/sirius1024/pubimgs/master/blogs/iterm2/9.png)
+
+这里我颜色改成了纯黑色，我不喜欢上面的颜色 Basic Colors -> Background 改为000000
 
 ### 安装主题
 
