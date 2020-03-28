@@ -76,7 +76,7 @@ pip install powerline-status --user
 ```
 若你用的是pip3
 ```bash
-pip install powerline-status --user
+pip3 install powerline-status --user
 ```
 没有安装pip的同学可能会碰到zsh: command not found: pip。
 
