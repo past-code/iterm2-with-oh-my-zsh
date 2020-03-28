@@ -71,10 +71,11 @@ powerline官网：http://powerline.readthedocs.io/en/latest/installation.html
 
 安装powerline的方式依然简单，也只需要一条命令：
 
+
 ```bash
 pip install powerline-status --user
 ```
-若你用的是pip3
+
 ```bash
 pip3 install powerline-status --user
 ```
@@ -90,7 +91,11 @@ sudo easy_install pip
 
 安装后再次执行安装powerline的命令即可。
 
-pip如果安装不成功可以安装pip3
+pip如果安装不成功可以安装pip3，前提你装了python3
+没有的话先装吧
+```bash
+brew search python3
+```
 ```bash
 curl https://bootstrap.pypa.io/get-pip.py | python3
 ```
@@ -241,9 +246,11 @@ vi ~/.zshrc
 Preferences -> Profiles -> Colors 中有Foreground是标准字体颜色，ANSI Colors中Bright的第一个是补全的字体颜色。
 
 Q：安装了 Oh My Zsh 之后再用 node 或者其它全局包命令不可用？
-A：在 ~/.zshrc 中添加一句:
-export NVM_DIR="$HOME/.nvm"
+A：在 ~/.zshrc 中添加:
 ```bash
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 ```
+### 其他
+配置文件 ~/.zshrc 里面可以配置 DEFAULT_USER=$USER 来隐藏用户名和主机名。
+修改 agnoster 主题的配置文件（通常是：~/.oh-my-zsh/themes/agnoster.zsh-theme）中的 prompt_dir() {} 函数，将其中 prompt_segment blue black '%~' 改为 prompt_segment blue black '%c' 来仅显示当前目录。
