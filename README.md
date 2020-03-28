@@ -239,3 +239,11 @@ vi ~/.zshrc
 有同学说补全命令的字体不太清晰，与背景颜色太过相近，其实可以自己调整一下字体颜色。
 
 Preferences -> Profiles -> Colors 中有Foreground是标准字体颜色，ANSI Colors中Bright的第一个是补全的字体颜色。
+
+Q：安装了 Oh My Zsh 之后再用 node 或者其它全局包命令不可用？
+A：在 ~/.zshrc 中添加一句:
+export NVM_DIR="$HOME/.nvm"
+```bash
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+```
