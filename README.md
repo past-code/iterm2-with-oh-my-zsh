@@ -248,9 +248,11 @@ Preferences -> Profiles -> Colors 中有Foreground是标准字体颜色，ANSI C
 Q：安装了 Oh My Zsh 之后再用 node 或者其它全局包命令不可用？
 A：在 ~/.zshrc 中添加:
 ```bash
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
 ### 其他
+
 配置文件 ~/.zshrc 里面可以配置 DEFAULT_USER=$USER 来隐藏用户名和主机名。
 修改 agnoster 主题的配置文件（通常是：~/.oh-my-zsh/themes/agnoster.zsh-theme）中的 prompt_dir() {} 函数，将其中 prompt_segment blue black '%~' 改为 prompt_segment blue black '%c' 来仅显示当前目录。
